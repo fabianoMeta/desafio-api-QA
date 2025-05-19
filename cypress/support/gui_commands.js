@@ -13,7 +13,7 @@ Cypress.Commands.add('login', (
     }
 
     const validate = () => {
-        cy.visit(`${Cypress.env.baseUrl}/`)
+        cy.visit('/')
         cy.location('pathname', { timeout: 1000 })
             .should('not.eq', '/minha-conta/')
     }
