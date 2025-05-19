@@ -25,7 +25,7 @@ jobs:
       - name: Rodar testes Cypress (modo headless)
         run: npx cypress run
 
-      - name: Salvar screenshots e vídeos
+      - name: Salvar screenshots, reports e vídeos
         if: failure()
         uses: actions/upload-artifact@v4
         with:
@@ -33,3 +33,4 @@ jobs:
           path: |
             cypress/screenshots
             cypress/videos
+            cypress/results

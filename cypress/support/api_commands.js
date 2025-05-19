@@ -107,7 +107,7 @@ Cypress.Commands.add('api_cadastrarCarrinho', ( carrinho, authorization ) => {
         body: { produtos: produtos },
         failOnStatusCode: false,
         headers: {
-            'Authorization': `${authorization}`,
+            'Authorization': authorization,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
@@ -120,7 +120,7 @@ Cypress.Commands.add('api_excluirCarrinho', ( token ) => {
         url: `${Cypress.env('apiBaseUrl')}/carrinhos/concluir-compra`,
         failOnStatusCode: false,
         headers: {
-            'Authorization': `${token}`,
+            'Authorization': token,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
