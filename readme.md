@@ -1,6 +1,9 @@
-# Testes Automatizados - Pasta `gui`
+# Desafio-api-QA
+Este projeto utiliza o cypress para automação de testes end-to-end na interface gráfica (GUI) da aplicação (lojaebac.ebaconline.art.br) e também para automação de APIs no repositório (https://serverest.dev/) com intuito de mapear alguns cenários de testes em ambos os ambientes para automatização dos testes.
 
-Este projeto utiliza o Cypress para automação de testes end-to-end na interface gráfica (GUI) da aplicação.
+## Testes Automatizados - Pasta `gui`
+
+Este projeto utiliza o Cypress para automação de testes e2e na interface gráfica (GUI) da aplicação, onde foram mapeados os fluxos de login, cadastro, adicionar produtos no carrinho e concluir a compra como cenários a serem automatizados.
 
 ## Estrutura dos Testes
 
@@ -18,7 +21,7 @@ Os testes acima foram plenejados pensando em sua importância para um fluxo de e
 
 ## Testes Automatizados - Pasta `api`
 
-Além dos testes de interface, o projeto também inclui testes automatizados para a API da aplicação, localizados em `cypress/e2e/api`.
+Além dos testes de interface, o projeto também inclui testes automatizados para a API da aplicação, localizados em `cypress/e2e/api`, onde foram mapeados fluxos de testes para as APIs de Login, Usuários, Produtos e Carrinhos.
 
 ### Exemplos de Testes Realizados na API
 
@@ -31,7 +34,9 @@ Além dos testes de interface, o projeto também inclui testes automatizados par
 
 1. Instale as dependências:
     ```bash
-    npm install
+    npm install cypress --save-dev
+    npm install @faker-js/faker --save-dev
+    npm i cypress-plugin-api
     ```
 2. Execute os testes:
     ```bash

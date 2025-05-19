@@ -1,7 +1,7 @@
 {
   "name": "cypress-project-ecommerce",
   "version": "1.0.0",
-  "description": "Cypress project for e-commerce testing",
+  "description": "Projeto cypress para testes de e-commerce e API",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
