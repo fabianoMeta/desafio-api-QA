@@ -44,7 +44,7 @@ Além dos testes de interface, o projeto também inclui testes automatizados par
     ```
     ou
     ```bash
-    npx cypress run
+    npx cypress run --spec 'cypress/e2e/**/*.cy.js'
     ```
 
 ## Observações
