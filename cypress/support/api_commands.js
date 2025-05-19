@@ -60,7 +60,33 @@ Cypress.Commands.add('api_cadastrarProdutos', ( produto, authorization ) => {
         },
         failOnStatusCode: false,
         headers: {
-            Authorization: `${authorization}`,
+            'Authorization': `${authorization}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+    })
+})
+
+Cypress.Commands.add('api_excluirProduto', ( produtoId ) => {
+    cy.request({
+        method: 'DELETE',
+        url: `${Cypress.env('apiBaseUrl')}/produtos/${produtoId}`,
+        failOnStatusCode: false,
+        headers: {
+            'Authorization': `${authorization}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+    })
+})
+
+Cypress.Commands.add('api_buscarProduto', ( produtoId, authorization ) => {
+    cy.request({
+        method: 'GET',
+        url: `${Cypress.env('apiBaseUrl')}/produtos/${produtoId}`,
+        failOnStatusCode: false,
+        headers: {
+            'Authorization': `${authorization}`,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },
@@ -81,7 +107,20 @@ Cypress.Commands.add('api_cadastrarCarrinho', ( carrinho, authorization ) => {
         body: { produtos: produtos },
         failOnStatusCode: false,
         headers: {
-            Authorization: `${authorization}`,
+            'Authorization': `${authorization}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+    })
+})
+
+Cypress.Commands.add('api_excluirCarrinho', ( token ) => {
+    cy.request({
+        method: 'DELETE',
+        url: `${Cypress.env('apiBaseUrl')}/carrinhos/concluir-compra`,
+        failOnStatusCode: false,
+        headers: {
+            'Authorization': `${token}`,
             'Content-Type': 'application/json',
             'Accept': 'application/json',
         },

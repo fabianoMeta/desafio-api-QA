@@ -30,4 +30,12 @@ describe('Carrinhos', () => {
                 carrinhoCriado.idProduto = response.body._id
             })
     })
+
+    it('Excluir carrinho', () => { 
+        cy.api_excluirCarrinho(token)
+            .then((response) => {
+                expect(response.status).to.eq(200)
+                expect(response.body.message).to.eq('Registro excluído com sucesso')
+            })
+    })
 })

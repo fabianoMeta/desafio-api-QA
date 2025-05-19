@@ -4,7 +4,7 @@ Este projeto utiliza o Cypress para automação de testes end-to-end na interfac
 
 ## Estrutura dos Testes
 
-Os testes localizados em `cypress/e2e/gui` têm como objetivo validar funcionalidades da interface do usuário, garantindo que os fluxos principais estejam funcionando conforme esperado.
+Os testes localizados em `cypress/e2e/gui` têm como objetivo validar funcionalidades da interface do usuário, garantindo que os fluxos planejados estejam funcionando conforme esperado.
 
 ### Exemplos de Testes Realizados na GUI
 
@@ -12,6 +12,9 @@ Os testes localizados em `cypress/e2e/gui` têm como objetivo validar funcionali
 - **Cadastro de Novo Usuário:** Testa o fluxo de criação de conta, incluindo validação de campos obrigatórios.
 - **Adição de Produtos ao Carrinho:** Garante que produtos podem ser adicionados e removidos do carrinho corretamente.
 - **Finalização de Compra:** Valida o processo de checkout, desde o carrinho até a confirmação do pedido.
+  
+### Contexto para Criação dos cenários de testes acima 
+Os testes acima foram plenejados pensando em sua importância para um fluxo de execução que será executado diversas vezes, em diferentes entregas, onde o login é a parte no qual será necessário ser chamada várias vezes, devido o cenário ser executado em diferentes situações dentro de um fluxo de compras no e-commerce, por exemplo, assim como o cadastro de usuário que seria um passo a ser executado, caso não haja um usuário já inserido na aplicação. Já o cenário de adição de produtos no carrinhos é um importante para mapear visando a finalização da compra, garantindo com isso que este fluxo esteja devidamente mapeado e por fim a finalização da compra é o destino final que normalmente ocorre num processo de compra dentro do e-commerce, mostrando com isso sua importância como fluxo a ser mapeado para automação e posteriormente execução em testes regressivos.
 
 ## Testes Automatizados - Pasta `api`
 
