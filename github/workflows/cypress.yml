@@ -25,7 +25,6 @@ jobs:
       - name: Rodar testes Cypress (modo headless)
         run: npx cypress run
 
-      # Opcional: salvar screenshots e vídeos como artefatos em caso de falha
       - name: Salvar screenshots e vídeos
         if: failure()
         uses: actions/upload-artifact@v4
